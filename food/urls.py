@@ -1,1 +1,1 @@
-from django.urls import pathfrom . import viewsapp_name = 'food'urlpatterns = [    path('', views.category_list, name='category_list'),    path('category/<int:pk>/', views.category_detail, name='category_detail'),]
+from django.urls import pathfrom . import viewsapp_name = 'food'urlpatterns = [    path('', views.category_list, name='category_list'),    path('category/<int:pk>/', views.category_detail, name='category_detail'),    path('category/<int:pk>/', views.shop_detail, name='shop_detail'),]

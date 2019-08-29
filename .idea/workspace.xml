@@ -2,11 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7005231e-84a1-4a0a-bac8-1259098a476c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/food/templates/food/shop_detail.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/food/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/food/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/food/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/food/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/food/templates/food/category_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/food/templates/food/category_detail.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/food/templates/food/detail_page.html" beforeDir="false" afterPath="$PROJECT_DIR$/food/templates/food/detail_page.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/layout/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/layout/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/food/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/food/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/food/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/food/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/크롤링코드.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/크롤링코드.ipynb" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -17,8 +21,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="Python Script" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>

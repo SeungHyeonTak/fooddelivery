@@ -14,3 +14,10 @@ def category_detail(request, pk):
     return render(request, 'food/category_detail.html', {
         'cate_detail': cate_detail,
     })
+
+
+def shop_detail(request, pk):
+    shop_detail = get_object_or_404(Shop, pk=pk)
+    return render(request, 'food/shop_detail.html', {
+        'shop_detail': shop_detail,
+    })
