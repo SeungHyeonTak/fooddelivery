@@ -2,11 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7005231e-84a1-4a0a-bac8-1259098a476c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/config/asset_storage.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/s3_upload.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/food/forms.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/food/templates/accounts/login.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/food/templates/food/category_detail.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/food/templates/food/category_list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/food/templates/food/detail_page.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/img/background/login.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/img/background/main2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/img/background/main3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/img/background/main_photo.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/img/main22.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/img/main_logo.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/config/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/layout/base.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/config/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/food/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/food/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/food/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/food/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/food/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/food/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/food/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/food/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/layout/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/layout/index.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -29,13 +43,17 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/static" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/static/assets/img/background" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/static/font" />
       <recent name="$PROJECT_DIR$/layout" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/static/assets/img/background" />
+      <recent name="$PROJECT_DIR$/static/assets/img" />
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/static" />
     </key>
   </component>
