@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.sites',
+    'django.contrib.humanize',
     'django_extensions',
     'sslserver',
     'allauth',
@@ -138,6 +139,12 @@ USE_TZ = True
 LOGIN_REDIRECT_URL = '/'
 
 ACCOUNT_FORMS = {'login': 'food.forms.CustomLoginForm'}
+
+# Iamport_key
+IAMPORT_SHOP_ID = IAMPORT_TSH_ID
+IAMPORT_KEY = IAMPORT_TSH_KEY
+IAMPORT_SECRET = IAMPORT_TSH_SECRET
+
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.2/howto/static-files/

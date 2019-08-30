@@ -3,6 +3,7 @@ from django.urls import reverse
 from jsonfield import JSONField
 from django.core.validators import MinValueValidator, MaxValueValidator, RegexValidator
 from django.contrib.auth import get_user_model
+from .payment import BaseOrder
 
 User = get_user_model()
 
@@ -38,7 +39,7 @@ class Shop(models.Model):
 
 class Item(models.Model):
     shop = models.ForeignKey(Shop, on_delete=models.CASCADE)
-    name = models.CharField(max_length=50, db_index=True)  # 메뉴 이름
+    name = models.CharField(max_length=150, db_index=True)  # 메뉴 이름
     desc = models.TextField(blank=True)  # 메뉴 설명
     amount = models.PositiveIntegerField()  # 가격
     photo = models.ImageField(blank=True)  # 메뉴 사진
@@ -64,16 +65,16 @@ class Review(models.Model):
         return self.message
 
 
-# class Order(BaseOrder):
-#     address = models.CharField(max_length=100)
-#     phone = models.CharField(max_length=11, validators=[RegexValidator(r'010[1-9]\d{7}$')])
+class Order(BaseOrder):
+    address = models.CharField(max_length=100)
+    phone = models.CharField(max_length=11, validators=[RegexValidator(r'010[1-9]\d{7}$')])
 
 
-# class OrderItem(models.Model):
-#     item = models.ForeignKey(Item, on_delete=models.CASCADE)
-#     quantity = models.PositiveIntegerField()
-#     order = models.ForeignKey(Order, on_delete=models.CASCADE)
-#
-#     @property
-#     def amount(self):
-#         return self.quantity * self.item.amount
+class OrderItem(models.Model):
+    item = models.ForeignKey(Item, on_delete=models.CASCADE)
+    quantity = models.PositiveIntegerField()
+    order = models.ForeignKey(Order, on_delete=models.CASCADE)
+
+    @property
+    def amount(self):
+        return self.quantity * self.item.amount
