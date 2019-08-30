@@ -49,6 +49,9 @@ class Item(models.Model):
     def __str__(self):
         return self.name
 
+    class Meta:
+        ordering = ['-amount']
+
 
 class Review(models.Model):
     shop = models.ForeignKey(Shop, on_delete=models.CASCADE)
