@@ -3,10 +3,25 @@
   <component name="ChangeListManager">
     <list default="true" id="7005231e-84a1-4a0a-bac8-1259098a476c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/config/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/food/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/food/apps.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/food/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/food/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/food/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/food/migrations/0002_shop.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/food/migrations/0003_item_review.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/food/migrations/0004_auto_20190830_1039.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/food/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/food/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/food/templates/food/_iamport.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/food/templates/food/category_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/food/templates/food/category_detail.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/food/templates/food/detail_page.html" beforeDir="false" afterPath="$PROJECT_DIR$/food/templates/food/detail_page.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/food/templates/food/order_form.html" beforeDir="false" afterPath="$PROJECT_DIR$/food/templates/food/order_form.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/food/templates/food/order_pay.html" beforeDir="false" afterPath="$PROJECT_DIR$/food/templates/food/order_pay.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/food/templates/food/shop_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/food/templates/food/shop_detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/food/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/food/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/food/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/food/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/food/widgets.py" beforeDir="false" afterPath="$PROJECT_DIR$/food/widgets.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/layout/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/layout/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/크롤링코드.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/크롤링코드.ipynb" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -29,7 +44,7 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$USER_HOME$/바탕화면/demo-10minutes-yogiyo" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">

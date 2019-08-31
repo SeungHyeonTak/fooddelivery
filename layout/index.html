@@ -8,6 +8,8 @@
     <!-- Page Title -->
     <title>대한민국 1등 배달웹,배달의민족</title>
 
+    <script src="https://kit.fontawesome.com/2cd2350b1f.js"></script>
+
     <!-- Compressed Styles -->
     <link href="https://s3.ap-northeast-2.amazonaws.com/static.fooddeliverybackend.online/static/css/slides.min.css"
           rel="stylesheet" type="text/css">
@@ -44,6 +46,27 @@
     <!--    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"-->
     <!--            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"-->
     <!--            crossorigin="anonymous"></script>-->
+    <style>
+        .sns {
+            width: auto;
+            height: auto;
+            max-width: 50px;
+            max-height: 50px;
+        }
+        .footer_log {
+            width: auto;
+            height: auto;
+            max-width: 250px;
+            max-height: 250px;
+        }
+        .footer_icon {
+            width: auto;
+            height: auto;
+            max-width: 150px;
+            max-height: 150px;
+        }
+
+    </style>
 </head>
 <body class="slides chain simplifiedMobile animated">
 <!-- SVG Library -->
@@ -328,53 +351,35 @@
 </section>
 {% block content %}
 {% endblock %}
-<!-- Slide 3 (#14) -->
-<section class="slide fade-6 kenBurns fromRight">
-    <div class="content"
-         style="background-image:url(https://s3.ap-northeast-2.amazonaws.com/static.fooddeliverybackend.online/static/assets/img/background/main3.jpg)">
-        <div class="container">
-            <div class="wrap">
-
-                <div class="fix-12-12">
-                    <div class="fix-6-12 left toLeft">
-                        <h1 class="ae-1">Designers are meant to be loved, not to be understood.</h1>
-                        <p class="ae-2"><span class="opacity-8">You must forget all your theories, all your ideas before the subject. What part of these is really your own will be expressed in your&nbsp;expression.</span>
-                        </p>
-                        <!--                        <a class="button blue gradient crop ae-3">Get Started</a>-->
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </div>
-    <!--    <div class="background"-->
-    <!--         style="background-image:url(https://s3.ap-northeast-2.amazonaws.com/static.fooddeliverybackend.online/static/assets/img/background/main3.jpg)"></div>-->
-</section>
 
 <!-- Slide 4 (#95) -->
 <section class="slide fade-6 kenBurns">
     <div class="content" style="background-color: #ffffff;">
         <div class="container">
-            <div class="wrap">
-
-                <div class="fix-6-12">
-                    <h1 class="huge ae-1 margin-bottom-2">Download Mobile App</h1>
-                    <p class="hero ae-2 margin-bottom-3"><span
-                            class="opacity-8">Learning never exhausts the mind.</span></p>
-
-                    <form action="#" autocomplete="off" class="slides-form margin-bottom-3">
-                        <input type="email" class="ae-3" name="email" placeholder="E-mail address"/>
-                        <button type="submit" class="button blue gradient ae-4" name="submit">Try it free</button>
-                    </form>
-
-                    <a href="#" class="button hollow ae-5"><img
-                            src="https://s3.ap-northeast-2.amazonaws.com/static.fooddeliverybackend.online/static/assets/img/appstore.jpg"
-                            height="63"/></a><a
-                        href="#" class="button hollow ae-6"><img
-                        src="https://s3.ap-northeast-2.amazonaws.com/static.fooddeliverybackend.online/static/assets/img/googleplay.jpg"
-                        height="63"/></a>
+            <div class="row">
+                <div class="col-sm-6" style="position: absolute; left: 70px; top: 250px;">
+                    <a href="https://www.facebook.com/smartbaedal/"><img
+                            src="https://s3.ap-northeast-2.amazonaws.com/static.fooddeliverybackend.online/static/assets/img/facebook-logo.png"
+                            class="sns"></a>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a href="https://www.instagram.com/baemin_official/"><img
+                            src="https://s3.ap-northeast-2.amazonaws.com/static.fooddeliverybackend.online/static/assets/img/instagram.png"
+                            class="sns"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a href="https://www.youtube.com/user/smartbaedal2"><img
+                            src="https://s3.ap-northeast-2.amazonaws.com/static.fooddeliverybackend.online/static/assets/img/youtube.png"
+                            class="sns"></a>
+                    <br>
+                    <br><br><br><br>
+                    <p style="color:black">(주)우아한형제들</p>
+                    <p style="color:black">서울시 송파구 위례성대로 2 장은빌딩 2층</p>
                 </div>
-
+                <div class="col-sm-4" style="position: absolute; left: 600px; top: 100px;">
+                    <img src="https://s3.ap-northeast-2.amazonaws.com/static.fooddeliverybackend.online/static/assets/img/footer.png"
+                         class="footer_log">
+                </div>
+                <div class="col-sm-4" style="position: absolute; left: 750px; top: 250px;">
+                    <img src="https://s3.ap-northeast-2.amazonaws.com/static.fooddeliverybackend.online/static/assets/img/footer_log.png"
+                         class="footer_icon">
+                </div>
             </div>
         </div>
     </div>

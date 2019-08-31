@@ -29,20 +29,21 @@ def shop_detail(request, pk):
 
 @login_required
 def order_new(request, shop_pk):
-    item_qs = Item.objects.filter(shop__pk=shop_pk, id__in=request.GET.keys())
-
+    item_qs = Item.objects.filter(shop__pk=shop_pk, pk__in=request.GET.keys())
     quantity_dict = request.GET.dict()
     quantity_dict = {int(k): int(v) for k, v in quantity_dict.items()}
 
-    item_order_list = []
+    item_list = []
+    print(item_qs)
     for item in item_qs:
         quantity = quantity_dict[item.pk]
         order_item = OrderItem(quantity=quantity, item=item)
-        item_order_list.append(order_item)
+        item_list.append(order_item)
 
-    amount = sum(order_item.amount for order_item in item_order_list)
+    amount = sum(order_item.amount for order_item in item_list)
     instance = Order(name='배달주문건', amount=amount)
-
+    print(amount)
+    print(instance)
     if request.method == 'POST':
         form = OrderForm(request.POST, instance=instance)
         if form.is_valid():
@@ -50,16 +51,16 @@ def order_new(request, shop_pk):
             order.user = request.user
             order.save()
 
-            for order_item in item_order_list:
+            for order_item in item_list:
                 order_item.order = order
-            OrderItem.objects.bulk_create(item_order_list)
+            OrderItem.objects.bulk_create(item_list)
 
             return redirect('food:order_pay', shop_pk, str(order.merchant_uid))
     else:
         form = OrderForm(instance=instance)
 
     return render(request, 'food/order_form.html', {
-        'item_order_list': item_order_list,
+        'item_list': item_list,
         'form': form,
     })
 
@@ -72,10 +73,15 @@ def order_pay(request, shop_pk, merchant_uid):
         form = PayForm(request.POST, instance=order)
         if form.is_valid():
             form.save()
-            return redirect('food:profile')
+            return redirect('profile')
     else:
         form = PayForm(instance=order)
 
     return render(request, 'food/order_pay.html', {
         'form': form,
     })
+
+
+def order_detail(request, shop_pk, pk):
+    # TODO: order.user와 request.user 비교
+    pass

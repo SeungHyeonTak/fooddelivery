@@ -140,7 +140,7 @@ LOGIN_REDIRECT_URL = '/'
 
 ACCOUNT_FORMS = {'login': 'food.forms.CustomLoginForm'}
 
-# Iamport_key
+# iamport_secret_key
 IAMPORT_SHOP_ID = IAMPORT_TSH_ID
 IAMPORT_KEY = IAMPORT_TSH_KEY
 IAMPORT_SECRET = IAMPORT_TSH_SECRET
