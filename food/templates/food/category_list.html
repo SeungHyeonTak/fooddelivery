@@ -1,1 +1,35 @@
-{% extends 'index.html' %}{% block content %}<!-- Slide 2 (#15) --><section class="slide fade-6 kenBurns fromLeft">    <div class="content"         style="background-image:url(https://s3.ap-northeast-2.amazonaws.com/static.fooddeliverybackend.online/static/assets/img/background/main2.jpg)">        <div class="container">            <div class="wrap">                {% for category in categorys %}                <div class="card" style="width: 18rem;">                    <div class="card-body">                        <h3 class="card-subtitle mb-2 text-muted" style="font-size: 15px;">                            <a href="{{ category.get_absolute_url }}">{{ category.name }}</a>                        </h3>                    </div>                </div>                {% endfor %}            </div>            <div class="fix-12-12">                <div class="fix-6-12 left toRight" style="position: absolute; left:500px; top:250px;">                    <h1 style="font-size:70px; font-weight: bold;">                        그것이 무엇이든<br>                        다~ 있다.<br>                    </h1>                </div>            </div>        </div>    </div></section>{% endblock %}
+{% extends "index.html" %}
+
+{% block content %}
+
+<!-- Slide 2 (#15) -->
+<section class="slide fade-6 kenBurns fromLeft">
+    <div class="content"
+         style="background-image:url(https://s3.ap-northeast-2.amazonaws.com/static.fooddeliverybackend.online/static/assets/img/background/main2.jpg)">
+        <div class="container">
+            <div class="wrap">
+                {% for category in categorys %}
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                        <h3 class="card-subtitle mb-2 text-muted" style="font-size: 15px;">
+                            <a href="{{ category.get_absolute_url }}">{{ category.name }}</a>
+                        </h3>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+            <div class="fix-12-12">
+                <div class="fix-6-12 left toRight" style="position: absolute; left:500px; top:250px;">
+                    <h1 style="font-size:70px; font-weight: bold;">
+                        그것이 무엇이든<br>
+                        다~ 있다.<br>
+                    </h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+
+

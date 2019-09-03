@@ -1,7 +1,9 @@
-from django.shortcuts import render, get_object_or_404, redirect
 from django.contrib.auth.decorators import login_required
-from .models import *
-from .forms import *
+from django.contrib.auth.mixins import LoginRequiredMixin
+from django.shortcuts import get_object_or_404, redirect, render
+from django.views.generic import ListView, DetailView, CreateView
+from .models import Category, Shop, Review, Order, Item, OrderItem
+from .forms import ReviewForm, OrderForm, PayForm
 from secret import *
 
 
@@ -21,29 +23,49 @@ def category_detail(request, pk):
 
 def shop_detail(request, pk):
     shop_detail = get_object_or_404(Shop, pk=pk)
+    print(shop_detail.category)
     return render(request, 'food/shop_detail.html', {
         'shop_detail': shop_detail,
         'naver_map': naver_map,
     })
 
 
+class ReviewCreateView(LoginRequiredMixin, CreateView):
+    model = Review
+    form_class = ReviewForm
+
+    def form_valid(self, form):
+        self.shop = get_object_or_404(Shop, pk=self.kwargs['pk'])
+
+        review = form.save(commit=False)
+        review.shop = self.shop
+        review.author = self.request.user
+
+        return super().form_valid(form)
+
+    def get_success_url(self):
+        return self.shop.get_absolute_url()
+
+
+review_new = ReviewCreateView.as_view()
+
+
 @login_required
 def order_new(request, shop_pk):
-    item_qs = Item.objects.filter(shop__pk=shop_pk, pk__in=request.GET.keys())
+    item_qs = Item.objects.filter(shop__pk=shop_pk, id__in=request.GET.keys())
+
     quantity_dict = request.GET.dict()
     quantity_dict = {int(k): int(v) for k, v in quantity_dict.items()}
 
-    item_list = []
-    print(item_qs)
+    item_order_list = []
     for item in item_qs:
         quantity = quantity_dict[item.pk]
-        order_item = OrderItem(quantity=quantity, item=item)
-        item_list.append(order_item)
+        order_item = OrderItem(quantity=quantity, item=item)  # 사용자 주소&전화번호 받아오기
+        item_order_list.append(order_item)
 
-    amount = sum(order_item.amount for order_item in item_list)
+    amount = sum(order_item.amount for order_item in item_order_list)
     instance = Order(name='배달주문건', amount=amount)
-    print(amount)
-    print(instance)
+
     if request.method == 'POST':
         form = OrderForm(request.POST, instance=instance)
         if form.is_valid():
@@ -51,16 +73,16 @@ def order_new(request, shop_pk):
             order.user = request.user
             order.save()
 
-            for order_item in item_list:
+            for order_item in item_order_list:
                 order_item.order = order
-            OrderItem.objects.bulk_create(item_list)
+            OrderItem.objects.bulk_create(item_order_list)
 
             return redirect('food:order_pay', shop_pk, str(order.merchant_uid))
     else:
         form = OrderForm(instance=instance)
 
     return render(request, 'food/order_form.html', {
-        'item_list': item_list,
+        'item_order_list': item_order_list,
         'form': form,
     })
 
@@ -82,6 +104,9 @@ def order_pay(request, shop_pk, merchant_uid):
     })
 
 
-def order_detail(request, shop_pk, pk):
-    # TODO: order.user와 request.user 비교
-    pass
+def login(request):
+    return render(request, 'accounts/login.html')
+
+
+def logout(request):
+    return render(request, 'accounts/logout.html')

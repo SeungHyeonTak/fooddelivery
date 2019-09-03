@@ -142,9 +142,8 @@ ACCOUNT_FORMS = {'login': 'food.forms.CustomLoginForm'}
 
 # iamport_secret_key
 IAMPORT_SHOP_ID = IAMPORT_TSH_ID
-IAMPORT_KEY = IAMPORT_TSH_KEY
-IAMPORT_SECRET = IAMPORT_TSH_SECRET
-
+IAMPORT_API_KEY = IAMPORT_TSH_KEY
+IAMPORT_API_SECRET = IAMPORT_TSH_SECRET
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.2/howto/static-files/

@@ -8,6 +8,8 @@ from .payment import BaseOrder
 
 class Category(models.Model):
     name = models.CharField(max_length=100, db_index=True)
+    icon = models.ImageField(blank=True)
+    is_public = models.BooleanField(default=False, db_index=True)
 
     def __str__(self):
         return self.name
@@ -58,6 +60,9 @@ class Item(models.Model):
     photo = models.ImageField(blank=True)
     is_public = models.BooleanField(default=False, db_index=True)
     meta = JSONField()
+
+    class Meta:
+        ordering = ['-amount', ]
 
     def __str__(self):
         return self.name
