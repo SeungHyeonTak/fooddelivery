@@ -38,20 +38,6 @@ class Shop(models.Model):
         return self.meta.get('address')
 
 
-class Review(models.Model):
-    shop = models.ForeignKey(Shop, on_delete=models.CASCADE)
-    author = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
-    photo = models.ImageField(blank=True)
-    rating = models.SmallIntegerField(validators=[MinValueValidator(1), MaxValueValidator(5)])
-    message = models.TextField()
-
-    class Meta:
-        ordering = ['-id']
-
-    def __str__(self):
-        return self.message
-
-
 class Item(models.Model):
     shop = models.ForeignKey(Shop, on_delete=models.CASCADE)
     name = models.CharField(max_length=100, db_index=True)

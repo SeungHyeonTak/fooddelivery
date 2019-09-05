@@ -55,6 +55,7 @@
             max-height: 150px;
         }
 
+
     </style>
 </head>
 <body class="slides chain simplifiedMobile animated">
@@ -318,6 +319,11 @@
                         <a href="{% url 'food:logout' %}" class="btn btn-info"
                            style="width: 100px; height: 40px; font-size: 20px; float: right;">
                             로그아웃
+                        </a>
+                        &nbsp;
+                        <a href="{% url 'food:profile' %}" class="btn btn-info"
+                           style="width: 100px; height: 40px; font-size: 20px; float: right;">
+                            주문내역
                         </a>
                         {% else %}
                         <a href="{% url 'account_login' %}" class="btn btn-info"

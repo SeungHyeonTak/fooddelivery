@@ -33,11 +33,6 @@ class ItemAdmin(admin.ModelAdmin):
     search_fields = ['name']
 
 
-@admin.register(Review)
-class ReviewAdmin(admin.ModelAdmin):
-    pass
-
-
 @admin.register(Order)
 class OrderAdmin(admin.ModelAdmin):
     list_display = ['imp_uid', 'user', 'name', 'amount_html', 'status_html', 'paid_at', 'receipt_link']

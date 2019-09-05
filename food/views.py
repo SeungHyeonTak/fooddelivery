@@ -1,16 +1,18 @@
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.shortcuts import get_object_or_404, redirect, render
-from django.views.generic import ListView, DetailView, CreateView
-from .models import Category, Shop, Review, Order, Item, OrderItem
-from .forms import ReviewForm, OrderForm, PayForm
+from django.views.generic import CreateView
+from .models import *
+from .forms import OrderForm, PayForm
 from secret import *
 from allauth.account.views import *
-from allauth.socialaccount.models import SocialApp
-from allauth.socialaccount.templatetags.socialaccount import get_providers
-from django.contrib.auth import authenticate
-from django.contrib.auth import login as django_login
-from django.conf import settings
+
+
+def profile(request):
+    orders = Order.objects.all()
+    return render(request, 'account/profile.html', {
+        'orders': orders,
+    })
 
 
 def category_list(request):
@@ -36,26 +38,6 @@ def shop_detail(request, pk):
     })
 
 
-class ReviewCreateView(LoginRequiredMixin, CreateView):
-    model = Review
-    form_class = ReviewForm
-
-    def form_valid(self, form):
-        self.shop = get_object_or_404(Shop, pk=self.kwargs['pk'])
-
-        review = form.save(commit=False)
-        review.shop = self.shop
-        review.author = self.request.user
-
-        return super().form_valid(form)
-
-    def get_success_url(self):
-        return self.shop.get_absolute_url()
-
-
-review_new = ReviewCreateView.as_view()
-
-
 @login_required
 def order_new(request, shop_pk):
     item_qs = Item.objects.filter(shop__pk=shop_pk, id__in=request.GET.keys())
@@ -70,7 +52,7 @@ def order_new(request, shop_pk):
         item_order_list.append(order_item)
 
     amount = sum(order_item.amount for order_item in item_order_list)
-    instance = Order(name='배달주문건', amount=amount)
+    instance = Order(name=item.name, amount=amount)
 
     if request.method == 'POST':
         form = OrderForm(request.POST, instance=instance)
@@ -101,7 +83,7 @@ def order_pay(request, shop_pk, merchant_uid):
         form = PayForm(request.POST, instance=order)
         if form.is_valid():
             form.save()
-            return redirect('profile')
+            return redirect('food:profile')
     else:
         form = PayForm(instance=order)
 
