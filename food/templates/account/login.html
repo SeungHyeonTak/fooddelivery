@@ -26,7 +26,7 @@ align-content: center;
 }
 
 .card{
-height: 370px;
+height: 420px;
 margin-top: auto;
 margin-bottom: auto;
 width: 400px;
@@ -110,14 +110,6 @@ margin-left: 4px;
 
 
 
-
-
-
-
-
-
-
-
 </style>
 {% endblock %}
 
@@ -151,28 +143,28 @@ margin-left: 4px;
                     <div class="card-body">
                         <form class="login" action="{% url 'account_login' %}" method="post">
                             {% csrf_token %}
-                            <div class="input-group form-group">
-                                <div class="input-group-prepend">
-                                    <span class="input-group-text"><i class="fas fa-user"></i></span>
-                                </div>
-                                <input type="text" class="form-control" placeholder="username">
+                            {{ form.as_p }}
+                            <!--                            <div class="input-group form-group">-->
+                            <!--                                <div class="input-group-prepend">-->
+                            <!--                                    <span class="input-group-text"><i class="fas fa-user"></i></span>-->
+                            <!--                                </div>-->
+                            <!--                                <input type="text" class="form-control" placeholder="username">-->
+                            <!--                            </div>-->
+                            <!--                            <div class="input-group form-group">-->
+                            <!--                                <div class="input-group-prepend">-->
+                            <!--                                    <span class="input-group-text"><i class="fas fa-key"></i></span>-->
+                            <!--                                </div>-->
+                            <!--                                <input type="password" class="form-control" placeholder="password">-->
+                            <!--                            </div>-->
+                            <div style="float:right;">
+                                <input type="submit" value="Login" class="btn float-right login_btn">
+                                {% include "socialaccount/snippets/provider_list.html" with process="login" %}
                             </div>
-                            <div class="input-group form-group">
-                                <div class="input-group-prepend">
-                                    <span class="input-group-text"><i class="fas fa-key"></i></span>
-                                </div>
-                                <input type="password" class="form-control" placeholder="password">
-                            </div>
-                            <input type="submit" value="Login" class="btn float-right login_btn">
-                            {% include "socialaccount/snippets/provider_list.html" with process="login" %}
                         </form>
                     </div>
                     <div class="card-footer">
                         <div class="d-flex justify-content-center links">
-                            계정이 없으십니까?<a href="#">회원가입</a>
-                        </div>
-                        <div class="d-flex justify-content-center">
-                            <a href="#">암호를 잊어버리셨습니까?</a>
+                            계정이 없으십니까?<a href="{% url 'account_signup' %}">회원가입</a>
                         </div>
                     </div>
                 </div>
