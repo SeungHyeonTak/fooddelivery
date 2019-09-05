@@ -5,6 +5,12 @@ from django.views.generic import ListView, DetailView, CreateView
 from .models import Category, Shop, Review, Order, Item, OrderItem
 from .forms import ReviewForm, OrderForm, PayForm
 from secret import *
+from allauth.account.views import *
+from allauth.socialaccount.models import SocialApp
+from allauth.socialaccount.templatetags.socialaccount import get_providers
+from django.contrib.auth import authenticate
+from django.contrib.auth import login as django_login
+from django.conf import settings
 
 
 def category_list(request):
@@ -102,11 +108,3 @@ def order_pay(request, shop_pk, merchant_uid):
     return render(request, 'food/order_pay.html', {
         'form': form,
     })
-
-
-def login(request):
-    return render(request, 'accounts/login.html')
-
-
-def logout(request):
-    return render(request, 'accounts/logout.html')

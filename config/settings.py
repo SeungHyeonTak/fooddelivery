@@ -72,7 +72,7 @@ ROOT_URLCONF = 'config.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'layout')],
+        'DIRS': [os.path.join(BASE_DIR, 'layout'), os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -84,6 +84,13 @@ TEMPLATES = [
         },
     },
 ]
+
+PROJECT_ROT = os.path.normpath(os.path.dirname(os.path.abspath(__file__)))
+
+ACCOUNT_FORMS = {
+    'login': 'food.forms.CustomLoginForm',
+    'signup': 'food.forms.CustomSignupForm',
+}
 
 WSGI_APPLICATION = 'config.wsgi.application'
 
@@ -137,8 +144,6 @@ USE_L10N = True
 USE_TZ = True
 
 LOGIN_REDIRECT_URL = '/'
-
-ACCOUNT_FORMS = {'login': 'food.forms.CustomLoginForm'}
 
 # iamport_secret_key
 IAMPORT_SHOP_ID = IAMPORT_TSH_ID
