@@ -2,8 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7005231e-84a1-4a0a-bac8-1259098a476c" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/delivery.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/delivery.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Untitled.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Untitled.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/asset_storage.py" beforeDir="false" afterPath="$PROJECT_DIR$/config/asset_storage.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/food/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/food/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/food/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/food/payment.py" beforeDir="false" afterPath="$PROJECT_DIR$/food/payment.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/food/templates/account/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/food/templates/account/profile.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/food/templates/food/detail_page.html" beforeDir="false" afterPath="$PROJECT_DIR$/food/templates/food/detail_page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/food/templates/food/shop_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/food/templates/food/shop_detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/food/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/food/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/food/widgets.py" beforeDir="false" afterPath="$PROJECT_DIR$/food/widgets.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/s3_upload.py" beforeDir="false" afterPath="$PROJECT_DIR$/s3_upload.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -14,8 +28,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Python Script" />
         <option value="HTML File" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -26,7 +40,15 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../facebook_clone_project" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -64,8 +86,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1566987799651</updated>
+      <workItem from="1583129913489" duration="11021000" />
     </task>
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
